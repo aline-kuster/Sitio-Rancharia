@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rye&display=swap" rel="stylesheet">
+  <script type="module" src="/src/main.ts" defer></script>
+  <title>Sítio Vale Rancharia</title>
+</head>
+
+<body>
+  <header class="header">
+    <section>
+      <a href="#" class="logo">
+        Sítio Rancharia
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <a href="#">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#photos">Fotos</a>
+        <a href="#acomodacoes">Acomodações</a>
+        <a href="#address">Endereço</a>
+      </nav>
+
+      <div class="icon">
+        <a href="https://wa.me/5527997559561" target="_blank" class="btn-reserva">
+          Fale no WhatsApp
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <div class="home-container">
+    <section id="home">
+      <div class="content">
+        <h3>Bem-vindo ao Sítio Vale Rancharia</h3>
+        <p>Um lugar para relaxar, se divertir e aproveitar a natureza.</p>
+        <a href="#about" class="btn">Saiba Mais sobre como funciona</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="about" id="about">
+    <h2 class="title">Sobre o Sítio</h2>
+
+    <div class="row">
+      <div class="container-image">
+        <img src="/img/Design sem nome.png" alt="sobre">
+      </div>
+      <div class="content">
+        <h3>Nossa História</h3>
+        <p>O Sítio Vale Rancharia é um espaço dedicado ao lazer e à convivência com a natureza. Localizado em
+          uma área tranquila, oferece diversas atividades para todas as idades, incluindo passeios, pesca,
+          trilhas e muito mais.</p>
+        <p>Nosso objetivo é proporcionar momentos inesquecíveis para famílias e amigos, em um ambiente seguro e
+          acolhedor.</p>
+        <a href="#photos" class="btn">Veja nossas fotos</a>
+      </div>
+
+    </div>
+  </section>
+  <section class="carrossel" id="photos">
+    <h2 class="title">Galeria de Fotos</h2>
+
+    <div class="container-carrossel">
+
+      <div class="track track--linha1" id="carrossel-track-1">
+        <div class="slide slide--retrato">
+          <img src="img/ampla.jpg" alt="Voo livre" />
+          <span class="badge">Voo livre</span>
+        </div>
+        <div class="slide slide--quadrado">
+          <img src="img/fotodaponte.jpg" alt="Trilhas" />
+          <span class="badge">Trilhas</span>
+        </div>
+        <div class="slide slide--paisagem">
+          <img src="img/ampla.jpg" alt="Tirolesa" />
+          <span class="badge">Tirolesa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="acomodacoes" id="acomodacoes">
+      <h2 class="title">Nossas Instalações</h2>
+
+      <div class="slider-acomodacoes">
+        <button class="seta seta-esquerda" id="seta-anterior" aria-label="Anterior">&#10094;</button>
+
+        <div class="slider-viewport">
+          <div class="row" id="acomodacoes-track">
+
+            <div class="card-acomodacao">
+              <div class="container-image">
+                <img src="/img/alojamento.png" alt="Quarto suíte" />
+              </div>
+              <div class="content">
+                <h3>Quarto Suíte</h3>
+                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
+                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
+                  aproveitar ao máximo sua estadia.</p>
+                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
+                  lazer, para que sua experiência seja ainda mais agradável.</p>
+                <a href="#address" class="btn">Veja nosso endereço</a>
+              </div>
+            </div>
+
+            <div class="card-acomodacao">
+              <div class="container-image">
+                <img src="/img/alojamento.png" alt="Quarto beliches" />
+              </div>
+              <div class="content">
+                <h3>Quarto com Beliches</h3>
+                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
+                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
+                  aproveitar ao máximo sua estadia.</p>
+                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
+                  lazer, para que sua experiência seja ainda mais agradável.</p>
+                <a href="#address" class="btn">Veja nosso endereço</a>
+              </div>
+            </div>
+
+            <div class="card-acomodacao">
+              <div class="container-image">
+                <img src="/img/alojamento.png" alt="Cozinha" />
+              </div>
+              <div class="content">
+                <h3>Cozinha</h3>
+                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
+                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
+                  aproveitar ao máximo sua estadia.</p>
+                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
+                  lazer, para que sua experiência seja ainda mais agradável.</p>
+                <a href="#address" class="btn">Veja nosso endereço</a>
+              </div>
+            </div>
+
+            <div class="card-acomodacao">
+              <div class="container-image">
+                <img src="/img/alojamento.png" alt="Área de churrasco" />
+              </div>
+              <div class="content">
+                <h3>Área de Churrasco</h3>
+                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
+                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
+                  aproveitar ao máximo sua estadia.</p>
+                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
+                  lazer, para que sua experiência seja ainda mais agradável.</p>
+                <a href="#address" class="btn">Veja nosso endereço</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="seta seta-direita" id="seta-proximo" aria-label="Próximo">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="address" id="address">
+    <h2 class="title">Como chegar</h2>
+    <p>O Sítio Vale Rancharia está localizado em uma área tranquila, rodeada pela natureza. Para chegar até nós, siga as
+      instruções abaixo:</p>
+
+    <p>Vindo no sentido Vitória, ao chegar em São Luís de Boa Sorte, siga até passar pelo campo de futebol chamado
+      "Bragantino Futebol Recreativo". Logo depois,
+      você verá uma entrada de estrada de terra à direita. Entre nessa estrada e siga por
+      aproximadamente 1 km. Você chegará à localização do sítio.</p>
+    <iframe class="mapa"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.1294265644174!2d-41.088830902655125!3d-20.170335924724906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9edafcab780ab%3A0x756f247bfe476868!2sVale%20Rancharia!5e0!3m2!1spt-BR!2sbr!4v1785151380568!5m2!1spt-BR!2sbr"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo">Sítio Rancharia</a>
+        <p>Um refúgio de tranquilidade, natureza e experiências inesquecíveis.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navegação</h3>
+        <a href="#">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#photos">Fotos</a>
+        <a href="#acomodacoes">Acomodações</a>
+        <a href="#address">Endereço</a>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <a href="https://wa.me/5527997559561" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/sitiovalerancharia/" target="_blank">Instagram</a>
+        <a href="#address">Como chegar</a>
+      </div>
+
+      <div class="footer-dev">
+        <h3>Desenvolvido por</h3>
+        <p>Aline Breda Kuster</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Sítio Rancharia</span>
+      <div class="share">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <img width="26" height="26" src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/5527997559561" target="_blank" aria-label="WhatsApp">
+          <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/50/ffffff/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
