@@ -82,12 +82,7 @@ npm run preview
 
 Projeto desenvolvido por Aline breda Kuster.
 
-## 📎 Scripts disponíveis
-
-```bash
-npm run dev
-npm run build
-npm run preview
-```
+## 📎 Vercel
+https://lp-rancharia.vercel.app/
 
 
