@@ -4,231 +4,529 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/style.css">
+  <title>Sítio Vale Rancharia | Lazer e natureza</title>
+  <meta name="description"
+    content="Sítio Vale Rancharia: piscina, açude, pesca, trilhas e hospedagem para famílias e grupos em meio à natureza. Reserve pelo WhatsApp.">
+  <meta name="theme-color" content="#1f3024">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rye&display=swap" rel="stylesheet">
-  <script type="module" src="/src/main.ts" defer></script>
-  <title>Sítio Vale Rancharia</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet">
+  <script type="module" src="/src/main.tsx"></script>
 </head>
 
 <body>
-  <header class="header">
-    <section>
-      <a href="#" class="logo">
-        Sítio Rancharia
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Sítio Vale Rancharia, início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z" /></svg>
+        </span>
+        <span class="brand-text">Vale Rancharia</span>
       </a>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="nav" id="main-nav">
-        <a href="#">Home</a>
+      <nav class="nav" id="main-nav" aria-label="Principal">
         <a href="#about">Sobre</a>
         <a href="#photos">Fotos</a>
-        <a href="#acomodacoes">Acomodações</a>
-        <a href="#address">Endereço</a>
+        <a href="#acomodacoes">Estrutura</a>
+        <a href="#address">Como chegar</a>
       </nav>
 
-      <div class="icon">
-        <a href="https://wa.me/5527997559561" target="_blank" class="btn-reserva">
-          Fale no WhatsApp
-        </a>
+      <div class="header-actions">
+        <div id="reservation-button-root" class="reservation-slot"></div>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false"
+          aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </section>
+    </div>
   </header>
 
-  <div class="home-container">
-    <section id="home">
-      <div class="content">
-        <h3>Bem-vindo ao Sítio Vale Rancharia</h3>
-        <p>Um lugar para relaxar, se divertir e aproveitar a natureza.</p>
-        <a href="#about" class="btn">Saiba Mais sobre como funciona</a>
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <picture>
+        <source media="(max-width: 700px)" srcset="/src/assets/images/hero-vista-acude-mobile.webp">
+        <img class="hero-img" src="/src/assets/images/hero-vista-acude.webp"
+          srcset="/src/assets/images/hero-vista-acude-1280.webp 1280w, /src/assets/images/hero-vista-acude.webp 1920w, /src/assets/images/hero-vista-acude-2560.webp 2560w"
+          sizes="100vw"
+          alt="Vista do açude com ponte de madeira, palmeiras, galpão e cafezal nos morros ao fundo"
+          fetchpriority="high" decoding="async">
+      </picture>
+      <div class="container hero-content">
+        <p class="eyebrow">Lazer · Natureza · Hospedagem</p>
+        <h1>Desacelere no <em>Vale Rancharia</em></h1>
+        <p class="lead">Um lugar para relaxar, se divertir e aproveitar a natureza com quem você ama.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5527997559561" target="_blank" rel="noopener noreferrer">
+            Reservar pelo WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#about">Conhecer o sítio</a>
+        </div>
       </div>
     </section>
-  </div>
 
-  <section class="about" id="about">
-    <h2 class="title">Sobre o Sítio</h2>
+    <!-- Destaques -->
+    <section class="highlights" aria-label="Destaques do sítio">
+      <ul class="container highlights-list">
+        <li class="highlight">
+          <span class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+              <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+              <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+            </svg>
+          </span>
+          <div><strong>Piscina</strong><span>Com vista para as montanhas</span></div>
+        </li>
+        <li class="highlight">
+          <span class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z" />
+              <path d="M21 14 10 2 3 14h18Z" />
+              <path d="M10 2v16" />
+            </svg>
+          </span>
+          <div><strong>Açude</strong><span>Passeios de barco no píer</span></div>
+        </li>
+        <li class="highlight">
+          <span class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
+              <path d="M18 12v.5" />
+              <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" />
+              <path
+                d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" />
+            </svg>
+          </span>
+          <div><strong>Pesca</strong><span>Momentos tranquilos à beira d'água</span></div>
+        </li>
+        <li class="highlight">
+          <span class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+            </svg>
+          </span>
+          <div><strong>Trilhas</strong><span>Natureza para todas as idades</span></div>
+        </li>
+      </ul>
+    </section>
 
-    <div class="row">
-      <div class="container-image">
-        <img src="/img/Design sem nome.png" alt="sobre">
-      </div>
-      <div class="content">
-        <h3>Nossa História</h3>
-        <p>O Sítio Vale Rancharia é um espaço dedicado ao lazer e à convivência com a natureza. Localizado em
-          uma área tranquila, oferece diversas atividades para todas as idades, incluindo passeios, pesca,
-          trilhas e muito mais.</p>
-        <p>Nosso objetivo é proporcionar momentos inesquecíveis para famílias e amigos, em um ambiente seguro e
-          acolhedor.</p>
-        <a href="#photos" class="btn">Veja nossas fotos</a>
-      </div>
+    <!-- Sobre -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <figure class="about-media reveal">
+          <img src="/src/assets/images/sobre-acude-eucalipto.webp"
+            srcset="/src/assets/images/sobre-acude-eucalipto-640.webp 640w, /src/assets/images/sobre-acude-eucalipto.webp 1000w"
+            sizes="(max-width: 860px) 100vw, 50vw"
+            alt="Eucalipto com balanço de corda à beira do açude, com as casas do sítio e a mata ao fundo"
+            loading="lazy" decoding="async">
+        </figure>
 
-    </div>
-  </section>
-  <section class="carrossel" id="photos">
-    <h2 class="title">Galeria de Fotos</h2>
-
-    <div class="container-carrossel">
-
-      <div class="track track--linha1" id="carrossel-track-1">
-        <div class="slide slide--retrato">
-          <img src="img/ampla.jpg" alt="Voo livre" />
-          <span class="badge">Voo livre</span>
+        <div class="about-text reveal">
+          <p class="eyebrow">Sobre o sítio</p>
+          <h2>Um refúgio para <em>viver a natureza</em></h2>
+          <p>O Sítio Vale Rancharia é um espaço dedicado ao lazer e à convivência com a natureza. Localizado em uma área
+            tranquila, oferece diversas atividades para todas as idades, incluindo passeios, pesca, trilhas e muito
+            mais.</p>
+          <p>Nosso objetivo é proporcionar momentos inesquecíveis para famílias e amigos, em um ambiente seguro e
+            acolhedor.</p>
+          <a href="#photos" class="link-arrow">
+            Ver fotos do sítio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </a>
         </div>
-        <div class="slide slide--quadrado">
-          <img src="img/fotodaponte.jpg" alt="Trilhas" />
-          <span class="badge">Trilhas</span>
-        </div>
-        <div class="slide slide--paisagem">
-          <img src="img/ampla.jpg" alt="Tirolesa" />
-          <span class="badge">Tirolesa</span>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="acomodacoes" id="acomodacoes">
-      <h2 class="title">Nossas Instalações</h2>
+    <!-- Galeria -->
+    <section class="section section-tight" id="photos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Galeria</p>
+          <h2>Cenários para <em>guardar na memória</em></h2>
+        </div>
 
-      <div class="slider-acomodacoes">
-        <button class="seta seta-esquerda" id="seta-anterior" aria-label="Anterior">&#10094;</button>
-
-        <div class="slider-viewport">
-          <div class="row" id="acomodacoes-track">
-
-            <div class="card-acomodacao">
-              <div class="container-image">
-                <img src="/img/alojamento.png" alt="Quarto suíte" />
-              </div>
-              <div class="content">
-                <h3>Quarto Suíte</h3>
-                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
-                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
-                  aproveitar ao máximo sua estadia.</p>
-                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
-                  lazer, para que sua experiência seja ainda mais agradável.</p>
-                <a href="#address" class="btn">Veja nosso endereço</a>
-              </div>
+        <!--
+          Carrossel contínuo: cada página tem 4 fotos na ordem GRANDE, PEQUENA, ALTA, PEQUENA.
+          Para adicionar fotos, copie uma <div class="bento gallery-page">...</div> inteira e troque as imagens.
+          O loop infinito é montado automaticamente pelo src/main.ts.
+        -->
+        <div class="gallery reveal" id="gallery" role="region" aria-label="Galeria de fotos">
+          <div class="gallery-track" id="gallery-track">
+            <!-- Página 1 -->
+            <div class="bento gallery-page" role="group" aria-roledescription="slide" aria-label="Fotos 1 de 5">
+              <figure class="bento-lg">
+                <img src="/src/assets/images/galeria-ponte-sobre-agua.webp"
+                  srcset="/src/assets/images/galeria-ponte-sobre-agua-800.webp 800w, /src/assets/images/galeria-ponte-sobre-agua.webp 1000w"
+                  sizes="(max-width: 700px) 100vw, 50vw"
+                  alt="Ponte de madeira sobre o açude, com palmeiras, casas e mata ao fundo" loading="lazy"
+                  decoding="async">
+                <figcaption>Ponte sobre a água</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-ponte-palmeiras.webp"
+                  alt="Ponte de madeira sobre o açude entre palmeiras" loading="lazy" decoding="async">
+                <figcaption>Ponte entre palmeiras</figcaption>
+              </figure>
+              <figure class="bento-tall">
+                <picture>
+                  <source media="(prefers-reduced-motion: reduce)" srcset="/src/assets/images/galeria-balanco-parado.webp">
+                  <img src="/src/assets/images/galeria-balanco.webp" alt="Balanço de corda sobre o açude" loading="lazy"
+                    decoding="async">
+                </picture>
+                <figcaption>Balanço de corda</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-pier-barcos.webp" alt="Barcos atracados no píer" loading="lazy"
+                  decoding="async">
+                <figcaption>Píer e barcos</figcaption>
+              </figure>
             </div>
 
-            <div class="card-acomodacao">
-              <div class="container-image">
-                <img src="/img/alojamento.png" alt="Quarto beliches" />
-              </div>
-              <div class="content">
-                <h3>Quarto com Beliches</h3>
-                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
-                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
-                  aproveitar ao máximo sua estadia.</p>
-                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
-                  lazer, para que sua experiência seja ainda mais agradável.</p>
-                <a href="#address" class="btn">Veja nosso endereço</a>
-              </div>
+            <!-- Página 2 -->
+            <div class="bento gallery-page" role="group" aria-roledescription="slide" aria-label="Fotos 2 de 5">
+              <figure class="bento-lg">
+                <img src="/src/assets/images/galeria-acude-palmeiras.webp"
+                  alt="Açude com palmeiras, barcos e ponte de madeira sob céu azul" loading="lazy"
+                  decoding="async">
+                <figcaption>Vista do alojamento secundário</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-casa-madeira.webp" alt="Casa de madeira e tijolo com varanda"
+                  loading="lazy" decoding="async">
+                <figcaption>Alojamento principal</figcaption>
+              </figure>
+              <figure class="bento-tall">
+                <img src="/src/assets/images/galeria-chale.webp" alt="Chalé entre palmeiras e árvores" loading="lazy"
+                  decoding="async">
+                <figcaption>Alojamento secundário</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-quiosques.webp" alt="Área dos quiosques com montanhas ao fundo"
+                  loading="lazy" decoding="async">
+                <figcaption></figcaption>
+              </figure>
             </div>
 
-            <div class="card-acomodacao">
-              <div class="container-image">
-                <img src="/img/alojamento.png" alt="Cozinha" />
-              </div>
-              <div class="content">
-                <h3>Cozinha</h3>
-                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
-                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
-                  aproveitar ao máximo sua estadia.</p>
-                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
-                  lazer, para que sua experiência seja ainda mais agradável.</p>
-                <a href="#address" class="btn">Veja nosso endereço</a>
-              </div>
+            <!-- Página 3 -->
+            <div class="bento gallery-page" role="group" aria-roledescription="slide" aria-label="Fotos 3 de 5">
+              <figure class="bento-lg">
+                <img src="/src/assets/images/galeria-deck-acude.webp" alt="Deck de madeira"
+                  loading="lazy" decoding="async">
+                <figcaption>Deck perto da piscina</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-quiosque-acude.webp" alt="Quiosque elevado e píer à beira do açude"
+                  loading="lazy" decoding="async">
+                <figcaption>Quiosque à beira da represa</figcaption>
+              </figure>
+              <figure class="bento-tall">
+                <img src="/src/assets/images/galeria-deck-tirolesa.webp"
+                  alt="Deck de madeira à beira do açude com o vale ao fundo" loading="lazy" decoding="async">
+                <figcaption>Caminho para o repressa</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-piscina.webp" alt="Piscina com deck de madeira" loading="lazy"
+                  decoding="async">
+                <figcaption>Piscina</figcaption>
+              </figure>
             </div>
 
-            <div class="card-acomodacao">
-              <div class="container-image">
-                <img src="/img/alojamento.png" alt="Área de churrasco" />
-              </div>
-              <div class="content">
-                <h3>Área de Churrasco</h3>
-                <p>O Sítio Vale Rancharia oferece acomodações confortáveis e práticas para todos os visitantes. Nossas
-                  instalações incluem chalés, áreas de camping e espaços para eventos, garantindo que todos possam
-                  aproveitar ao máximo sua estadia.</p>
-                <p>Além disso, contamos com infraestrutura completa, incluindo banheiros, cozinha equipada e áreas de
-                  lazer, para que sua experiência seja ainda mais agradável.</p>
-                <a href="#address" class="btn">Veja nosso endereço</a>
-              </div>
+            <!-- Página 4 -->
+            <div class="bento gallery-page" role="group" aria-roledescription="slide" aria-label="Fotos 4 de 5">
+              <figure class="bento-lg">
+                <img src="/src/assets/images/galeria-acude-balancos.webp"
+                  alt="Açude com balanços de corda, morros e céu azul" loading="lazy" decoding="async">
+                <figcaption>Tirolesa</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-galpao.webp"
+                  alt="Galpão coberto com mesas e bancos rústicos de madeira" loading="lazy" decoding="async">
+                <figcaption>Galpão</figcaption>
+              </figure>
+              <figure class="bento-tall">
+                <img src="/src/assets/images/galeria-boias-acude.webp"
+                  alt="Grupo de amigas boiando em câmaras de pneu no açude" loading="lazy" decoding="async">
+                <figcaption>Boia na represa</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-reflexo-amanhecer.webp"
+                  alt="Árvores refletidas no açude ao amanhecer, com névoa sobre a água" loading="lazy"
+                  decoding="async">
+                <figcaption>Amanhecer</figcaption>
+              </figure>
             </div>
 
+            <!-- Página 5 -->
+            <div class="bento gallery-page" role="group" aria-roledescription="slide" aria-label="Fotos 5 de 5">
+              <figure class="bento-lg">
+                <img src="/src/assets/images/galeria-mesas-rusticas.webp"
+                  alt="Quiosques cobertos com mesas rústicas de madeira" loading="lazy" decoding="async">
+                <figcaption>Mesas rústicas</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-deck-mirante.webp"
+                  alt="Deck de madeira à beira do açude com montanhas ao fundo" loading="lazy" decoding="async">
+                <figcaption>Mirante</figcaption>
+              </figure>
+              <figure class="bento-tall">
+                <img src="/src/assets/images/galeria-pesca.webp"
+                  alt="Pescador sorrindo segurando um tambaqui grande à beira do açude" loading="lazy"
+                  decoding="async">
+                <figcaption>Pesca</figcaption>
+              </figure>
+              <figure>
+                <img src="/src/assets/images/galeria-manha.webp"
+                  alt="Manhã ensolarada com jardim, caminho e açude ao fundo" loading="lazy" decoding="async">
+                <figcaption>Manhã no sítio</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
 
-        <button class="seta seta-direita" id="seta-proximo" aria-label="Próximo">&#10095;</button>
+        <!-- Setas: ao clicar, o automático para e a pessoa navega sozinha -->
+        <div class="gallery-arrows">
+          <button class="gallery-btn" type="button" id="gallery-prev" aria-label="Fotos anteriores">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <button class="gallery-btn" type="button" id="gallery-next" aria-label="Próximas fotos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Estrutura -->
+    <section class="section stay" id="acomodacoes">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Estrutura</p>
+          <h2>Tudo pronto para <em>a sua estadia</em></h2>
+          <p>Acomodações confortáveis e práticas, com banheiros, cozinha equipada e áreas de lazer para você aproveitar
+            ao máximo.</p>
+        </div>
 
-  <section class="address" id="address">
-    <h2 class="title">Como chegar</h2>
-    <p>O Sítio Vale Rancharia está localizado em uma área tranquila, rodeada pela natureza. Para chegar até nós, siga as
-      instruções abaixo:</p>
-
-    <p>Vindo no sentido Vitória, ao chegar em São Luís de Boa Sorte, siga até passar pelo campo de futebol chamado
-      "Bragantino Futebol Recreativo". Logo depois,
-      você verá uma entrada de estrada de terra à direita. Entre nessa estrada e siga por
-      aproximadamente 1 km. Você chegará à localização do sítio.</p>
-    <iframe class="mapa"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.1294265644174!2d-41.088830902655125!3d-20.170335924724906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9edafcab780ab%3A0x756f247bfe476868!2sVale%20Rancharia!5e0!3m2!1spt-BR!2sbr!4v1785151380568!5m2!1spt-BR!2sbr"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-  </section>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <a href="#" class="logo">Sítio Rancharia</a>
-        <p>Um refúgio de tranquilidade, natureza e experiências inesquecíveis.</p>
+        <ul class="stay-grid">
+          <!--
+            Para colocar uma foto num card vazio, troque o bloco <div class="stay-placeholder">...</div> por:
+            <img src="/src/assets/images/NOME-DA-FOTO.webp" alt="Descrição da foto" loading="lazy" decoding="async">
+          -->
+          <li class="stay-card reveal">
+            <img src="/src/assets/images/estrutura-alojamento.webp" alt="Prédio do alojamento principal, em tijolo e madeira"
+              loading="lazy" decoding="async">
+            <div class="stay-body">
+              <h3>Alojamento Principal</h3>
+              <p>Quartos suíte e com beliches para famílias e grupos.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <img src="/src/assets/images/estrutura-alojamento-secundario.webp"
+              alt="Alojamento secundário, casa verde de dois andares entre palmeiras e árvores" loading="lazy"
+              decoding="async">
+            <div class="stay-body">
+              <h3>Alojamento Secundário</h3>
+              <p>Mais quartos para acomodar grupos maiores.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <img src="/src/assets/images/estrutura-galpao.webp" alt="Galpão coberto com mesas e bancos rústicos de madeira"
+              loading="lazy" decoding="async">
+            <div class="stay-body">
+              <h3>Área de Convivência</h3>
+              <p>Galpão com mesas rústicas para reunir todo mundo.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <img src="/src/assets/images/estrutura-piscina.webp" alt="Piscina com piscina infantil ao lado" loading="lazy"
+              decoding="async">
+            <div class="stay-body">
+              <h3>Área da Piscina</h3>
+              <p>Piscina e piscina infantil com vista para o vale.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <div class="stay-placeholder" role="img" aria-label="Foto da área de churrasco em breve">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+              <span>Foto em breve</span>
+            </div>
+            <div class="stay-body">
+              <h3>Área de Churrasco</h3>
+              <p>Espaço para reunir todo mundo ao redor da brasa.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <div class="stay-placeholder" role="img" aria-label="Foto da área das crianças em breve">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+              <span>Foto em breve</span>
+            </div>
+            <div class="stay-body">
+              <h3>Área das Crianças</h3>
+              <p>Espaço para a criançada brincar à vontade.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <img src="/src/assets/images/estrutura-varanda.webp" alt="Vista da varanda para a piscina e o açude"
+              loading="lazy" decoding="async">
+            <div class="stay-body">
+              <h3>Varanda</h3>
+              <p>Vista para a piscina, o açude e as montanhas.</p>
+            </div>
+          </li>
+          <li class="stay-card reveal">
+            <div class="stay-placeholder" role="img" aria-label="Foto da casa da árvore em breve">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+              <span>Foto em breve</span>
+            </div>
+            <div class="stay-body">
+              <h3>Casa da Árvore</h3>
+              <p>Diversão no alto, entre as árvores.</p>
+            </div>
+          </li>
+        </ul>
       </div>
+    </section>
 
-      <div class="footer-links">
-        <h3>Navegação</h3>
-        <a href="#">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#photos">Fotos</a>
-        <a href="#acomodacoes">Acomodações</a>
-        <a href="#address">Endereço</a>
+    <!-- Como chegar -->
+    <section class="section" id="address">
+      <div class="container location-grid">
+        <div class="reveal">
+          <p class="eyebrow">Como chegar</p>
+          <h2>Fácil de <em>encontrar</em></h2>
+          <p class="location-intro">O sítio fica em uma área tranquila, rodeada pela natureza. Vindo no sentido Vitória:
+          </p>
+          <ol class="steps">
+            <li><span>Ao chegar em <strong>São Luís de Boa Sorte</strong>, siga em frente.</span></li>
+            <li><span>Passe pelo campo de futebol <strong>"Bragantino Futebol Recreativo"</strong>.</span></li>
+            <li><span>Logo depois, entre na <strong>estrada de terra à direita</strong>.</span></li>
+            <li><span>Siga por aproximadamente <strong>1 km</strong> e você chegará ao sítio.</span></li>
+          </ol>
+        </div>
+
+        <iframe class="map reveal" title="Mapa com a localização do Sítio Vale Rancharia"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.1294265644174!2d-41.088830902655125!3d-20.170335924724906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9edafcab780ab%3A0x756f247bfe476868!2sVale%20Rancharia!5e0!3m2!1spt-BR!2sbr!4v1785151380568!5m2!1spt-BR!2sbr"
+          allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
+    </section>
 
-      <div class="footer-contact">
-        <h3>Contato</h3>
-        <a href="https://wa.me/5527997559561" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/sitiovalerancharia/" target="_blank">Instagram</a>
-        <a href="#address">Como chegar</a>
-      </div>
-
-      <div class="footer-dev">
-        <h3>Desenvolvido por</h3>
-        <p>Aline Breda Kuster</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 Sítio Rancharia</span>
-      <div class="share">
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img width="26" height="26" src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png" alt="Instagram" />
+    <!-- Chamada final -->
+    <section class="container cta">
+      <div class="cta-card reveal">
+        <div>
+          <h2>Pronto para <em>desacelerar?</em></h2>
+          <p>Fale com a gente pelo WhatsApp e garanta a sua data.</p>
+        </div>
+        <a class="btn btn-light" href="https://wa.me/5527997559561" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>
+          Chamar no WhatsApp
         </a>
-        <a href="https://wa.me/5527997559561" target="_blank" aria-label="WhatsApp">
-          <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/50/ffffff/whatsapp.png" alt="WhatsApp" />
-        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z" /></svg>
+            </span>
+            <span>Vale Rancharia</span>
+          </a>
+          <p>Um refúgio de tranquilidade, natureza e experiências inesquecíveis.</p>
+        </div>
+
+        <div>
+          <h3>Navegação</h3>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#photos">Fotos</a></li>
+            <li><a href="#acomodacoes">Estrutura</a></li>
+            <li><a href="#address">Como chegar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="https://wa.me/5527997559561" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  <path stroke-width="4.5" transform="translate(7.3 6.8) scale(0.4)"
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sitiovalerancharia/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Como chegar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Sítio Vale Rancharia</span>
+        <span class="credit">
+          Desenvolvido por
+          <a href="https://wemado.com" target="_blank" rel="noopener noreferrer">wemado.com</a>
+        </span>
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>
