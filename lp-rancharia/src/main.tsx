@@ -1,20 +1,9 @@
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
-import { ReservationButton } from "@/components/ReservationButton";
-import { initGallery } from "@/scripts/gallery";
-import { initHeader } from "@/scripts/header";
-import { initMobileMenu } from "@/scripts/mobile-menu";
-import { initReveal } from "@/scripts/reveal";
+import { App } from "@/app/App";
 import "@/styles/global.css";
 
-document.documentElement.classList.add("js");
+const root = document.getElementById("root");
+if (!root) throw new Error("Elemento raiz da aplicação não encontrado.");
 
-initHeader();
-initMobileMenu();
-initGallery();
-initReveal();
-
-const reservationButtonRoot = document.getElementById("reservation-button-root");
-if (reservationButtonRoot) {
-  createRoot(reservationButtonRoot).render(<ReservationButton />);
-}
+createRoot(root).render(<StrictMode><App /></StrictMode>);

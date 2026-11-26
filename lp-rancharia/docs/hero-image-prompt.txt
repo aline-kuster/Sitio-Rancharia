@@ -1,0 +1,7 @@
+Mode: built-in image_gen (image editing).
+Source: src/assets/images/galeria-manha.webp
+Outputs: src/assets/images/hero-manha-cinematica.webp and hero-manha-cinematica-720.webp
+Note: AI-assisted reconstruction, not a lossless recovery of original camera detail.
+
+Final prompt:
+Use case: lighting-weather. Edit target: the attached real photograph of Sítio Vale Rancharia, a rural Brazilian retreat at sunrise. Restore this exact photograph for a high quality website hero. Preserve the same square framing, exact real landscape, tree positions, wooden pavilion, path, handrails, lake, buildings and hillside; do not add or remove objects, people or architecture. Improve fine detail and reduce compression artifacts, preserve realistic foliage and wood, gently recover shadows and highlight detail around the sun, apply rich natural greens and warm cinematic sunrise light with restrained subtle sun rays through existing branches. Natural editorial travel photography, realistic and atmospheric, no oversharpening, no halos, no fantasy objects, no text, no UI, no logos. Produce a high resolution image ideally 2048x2048 or higher. This is restoration and lighting enhancement of the supplied photo, not a different location.
