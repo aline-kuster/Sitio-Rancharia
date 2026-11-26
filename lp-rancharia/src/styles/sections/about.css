@@ -1,0 +1,41 @@
+@layer components {
+  /* ---------- Sobre ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: start;
+    gap: clamp(2.5rem, 6vw, 5.5rem);
+  }
+
+  .about-media {
+    position: relative;
+  }
+
+  .about-media img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 2rem;
+  }
+
+  .about-text {
+    padding-top: 0;
+  }
+
+  .about-text > p:not(.eyebrow) {
+    margin-top: 1.25rem;
+    font-size: 1.0625rem;
+    color: var(--muted-foreground);
+  }
+
+  .about-text h2 + p {
+    margin-top: 1.75rem !important;
+  }
+
+  @media (max-width: 860px) {
+    .about-media{
+      display: none;
+    }
+  }
+
+}

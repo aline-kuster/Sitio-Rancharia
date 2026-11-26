@@ -1,0 +1,8 @@
+Mode: built-in image_gen (conservative image editing).
+Source: src/assets/images/galeria-manha.webp
+Outputs: src/assets/images/hero-manha-natural.webp and hero-manha-natural-720.webp
+Intent: replace the cinematic treatment with a more natural photo; keep the CSS light, mist and motion effects.
+Note: AI-assisted reconstruction, not a lossless recovery of original camera detail.
+
+Final prompt:
+undefined

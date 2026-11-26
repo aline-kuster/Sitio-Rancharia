@@ -1,0 +1,94 @@
+@layer components {
+  /* ---------- Responsivo ---------- */
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav {
+      position: absolute;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 0.25rem clamp(1.25rem, 4vw, 2rem) 1.25rem;
+      background: rgba(246, 243, 236, 0.97);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 16px 24px -16px rgba(0, 0, 0, 0.3);
+      color: var(--foreground);
+    }
+
+    .menu-open .nav {
+      display: flex;
+    }
+
+    .nav :is(a, button) {
+      padding: 0.95rem 0;
+      border-radius: 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.0625rem;
+    }
+
+    .nav :is(a, button):last-child {
+      border-bottom: 0;
+    }
+
+    .nav :is(a, button):hover {
+      background: none;
+      color: var(--primary);
+    }
+
+    .about-grid,
+    .location-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-media img {
+      aspect-ratio: 4 / 3;
+    }
+
+    .about-text {
+      padding-top: 0;
+    }
+
+    .map {
+      min-height: 20rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* No celular o botão do header some; o WhatsApp fica na hero e no CTA */
+    .reservation-slot {
+      display: none;
+    }
+
+    .brand {
+      font-size: 1.375rem;
+    }
+
+    .hero-actions .btn {
+      flex: 1 1 100%;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+      grid-column: auto;
+    }
+  }
+}

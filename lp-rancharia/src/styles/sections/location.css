@@ -1,0 +1,64 @@
+@layer components {
+  /* ---------- Como chegar ---------- */
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: stretch;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .location-intro {
+    margin-top: 1.25rem;
+    font-size: 1.0625rem;
+    color: var(--muted-foreground);
+  }
+
+  .steps {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    counter-reset: step;
+    list-style: none;
+  }
+
+  .steps li {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    align-items: start;
+    gap: 1rem;
+    counter-increment: step;
+    color: var(--muted-foreground);
+  }
+
+  .steps li::before {
+    content: counter(step);
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .steps li > span {
+    padding-top: 0.25rem;
+  }
+
+  .steps strong {
+    font-weight: 600;
+    color: var(--foreground);
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+    min-height: 26rem;
+    border: 0;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+}

@@ -1,0 +1,16 @@
+@layer components {
+  /* ---------- Revelar ao rolar ---------- */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-enabled .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+
+    .reveal-enabled .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+}
