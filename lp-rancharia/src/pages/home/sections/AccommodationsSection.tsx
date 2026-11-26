@@ -4,7 +4,6 @@ import { PhotoGalleryButton, PhotosIcon } from "@/features/photo-gallery/PhotoGa
 import { usePhotoGallery } from "@/features/photo-gallery/PhotoGalleryProvider";
 
 const slides = accommodations.filter((space) => space.src);
-const otherSpaces = accommodations.filter((space) => !space.src);
 
 export function getSlideOffset(index: number, active: number, count: number) {
   return ((index - active + count + Math.floor(count / 2)) % count) - Math.floor(count / 2);
